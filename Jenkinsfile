@@ -36,6 +36,7 @@ parameters {
                     echo "Choice: ${params.CHOICE}"
                     echo "Password: ${params.PASSWORD}"
                     """
+                    
                 }
             }
         }
