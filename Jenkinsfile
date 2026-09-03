@@ -9,6 +9,11 @@ pipeline {
         COURSE= "Jenkins"
     }
 
+options {
+    disableConcurrentBuilds()
+        timeout(time: 15, unit: 'MINUTES') 
+    }
+
     // Build
     stages {
         stage('Build') {
@@ -17,6 +22,7 @@ pipeline {
                     sh """
                         echo "Building.."
                         echo "course is: ${COURSE}"
+                        sleep 5
                     """
                 }
             }
